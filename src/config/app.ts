@@ -15,3 +15,6 @@ export const PHOTO_MAX_DIMENSION = 1024
 export const PHOTO_QUALITY = 0.72
 /** localStorage holds roughly 5 MB per site; this keeps photos well under that. */
 export const MAX_PHOTOS = 6
+
+/** Linked from the footer. Point this at your own fork if you adapt the app. */
+export const SOURCE_CODE_URL = 'https://github.com/pvtielck/Safety-Plan'

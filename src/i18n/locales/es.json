@@ -17,7 +17,8 @@
     "callNumber": "Llamar al {{number}}",
     "textNumber": "Enviar texto al {{number}}",
     "textKeyword": "Enviar {{keyword}} al {{number}}",
-    "dismiss": "Cerrar aviso"
+    "dismiss": "Cerrar aviso",
+    "newTab": "(se abre en una pestaña nueva)"
   },
   "nav": {
     "label": "Menú principal",
@@ -50,13 +51,20 @@
     "withSomeone": "Los planes de seguridad funcionan mejor cuando los haces con alguien de confianza. Puede ser alguien de tu equipo de salud, como tu terapeuta, o una persona cercana a ti.",
     "notCare": "Esta aplicación no reemplaza la atención profesional. Si estás en peligro ahora mismo, llama al 911, o llama o envía un texto al 988.",
     "privacyTitle": "Tus datos se quedan en este dispositivo",
-    "privacyBody": "No hay cuentas ni rastreo. Nada de lo que escribes se envía a nadie. Tu plan se guarda solo en este navegador, en este dispositivo.",
+    "privacyBody": "Sin cuenta y sin rastreo. Nada de lo que escribes se envía a ningún lugar.",
     "privacyPin": "Si otras personas usan este dispositivo, puedes agregar un PIN en Ajustes.",
     "stepsTitle": "Qué incluye un plan de seguridad",
     "start": "Empezar mi plan",
     "continue": "Seguir con mi plan",
     "view": "Ver mi plan",
-    "language": "Idioma"
+    "language": "Idioma",
+    "heroTitle": "Tu plan para superar los momentos difíciles",
+    "reassure": "Puedes parar y volver cuando quieras. Todo se guarda mientras escribes.",
+    "offlineTitle": "Funciona sin internet",
+    "offlineBody": "Ábrelo cuando quieras, incluso sin conexión.",
+    "freeTitle": "Gratis, en inglés y español",
+    "freeBody": "Sin registro y sin costo.",
+    "previewLabel": "Ejemplo"
   },
   "builder": {
     "stepOf": "Paso {{current}} de {{total}}",
@@ -254,7 +262,9 @@
     "editStep": "Editar el paso {{number}}",
     "nothingYet": "Todavía no hay nada aquí.",
     "addToStep": "Agregar a este paso",
-    "step": "Paso {{number}}"
+    "step": "Paso {{number}}",
+    "startNext": "Cuando notes estas señales, pasa al paso {{number}}.",
+    "stillNeedHelp": "¿Todavía no te sientes a salvo? Pasa al paso {{number}}."
   },
   "export": {
     "title": "Guardar o imprimir una copia",
@@ -341,5 +351,10 @@
     "forgotBody": "Tu PIN no se puede recuperar, porque nunca se envió a ningún lugar. Para volver a entrar, puedes borrar los datos de esta aplicación y empezar un plan nuevo. Si imprimiste o descargaste tu plan, puedes usar esa copia para hacerlo otra vez.",
     "forgotErase": "Borrar datos y empezar de nuevo",
     "helpNote": "No necesitas tu PIN para pedir ayuda. Toca “¿Necesitas ayuda ahora?” en cualquier momento."
+  },
+  "footer": {
+    "privacy": "Tu plan se queda en este dispositivo.",
+    "notCare": "No reemplaza la atención profesional.",
+    "source": "Código fuente"
   }
 }

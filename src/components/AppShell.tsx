@@ -1,6 +1,7 @@
-import { BookHeart, LifeBuoy, LogOut, PencilLine, Settings as SettingsIcon } from 'lucide-react'
+import { BookHeart, LifeBuoy, LogOut, PencilLine, Settings as SettingsIcon, ShieldCheck } from 'lucide-react'
 import { useEffect, useRef, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
+import { SOURCE_CODE_URL } from '../config/app'
 import { routeToHash, type Route } from '../hooks/useHashRoute'
 
 interface AppShellProps {
@@ -79,7 +80,7 @@ export function AppShell({ children, screenKey, route, navigate, onOpenHelp, onQ
       </a>
 
       <header className="sticky top-0 z-30 border-b border-line bg-bg print:hidden">
-        <div className="mx-auto flex max-w-3xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-2.5">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-2.5">
           <p className="flex min-w-0 flex-1 items-center gap-2 text-lg font-bold">
             <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" className="size-8 shrink-0" />
             <span>{t('app.name')}</span>
@@ -104,7 +105,7 @@ export function AppShell({ children, screenKey, route, navigate, onOpenHelp, onQ
           </button>
         </div>
         {navigate && (
-          <nav aria-label={t('nav.label')} className="mx-auto hidden max-w-3xl px-4 pb-2 md:block">
+          <nav aria-label={t('nav.label')} className="mx-auto hidden max-w-5xl px-4 pb-2 md:block">
             <ul className="flex gap-1">{navLinks('top')}</ul>
           </nav>
         )}
@@ -114,10 +115,50 @@ export function AppShell({ children, screenKey, route, navigate, onOpenHelp, onQ
         id="main"
         ref={mainRef}
         tabIndex={-1}
-        className={`mx-auto max-w-3xl px-4 pt-6 print:max-w-none print:p-0 ${navigate ? 'pb-28 md:pb-16' : 'pb-16'}`}
+        className="mx-auto max-w-5xl px-4 pt-6 print:max-w-none print:p-0"
       >
         {children}
       </main>
+
+      <footer
+        className={`mx-auto max-w-5xl px-4 pt-12 text-sm text-ink-muted print:hidden ${navigate ? 'pb-28 md:pb-10' : 'pb-10'}`}
+      >
+        <div className="flex flex-col gap-3 border-t border-line pt-6 sm:flex-row sm:items-start sm:justify-between">
+          <p className="flex gap-2">
+            <ShieldCheck aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+            <span>
+              {t('footer.privacy')} {t('footer.notCare')}
+            </span>
+          </p>
+          <ul className="flex shrink-0 flex-wrap gap-x-5 gap-y-1">
+            {navigate && (
+              <li>
+                <a
+                  href={routeToHash({ name: 'welcome' })}
+                  onClick={(event) => {
+                    event.preventDefault()
+                    navigate({ name: 'welcome' })
+                  }}
+                  className="underline underline-offset-4 hover:text-ink"
+                >
+                  {t('nav.about')}
+                </a>
+              </li>
+            )}
+            <li>
+              <a
+                href={SOURCE_CODE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-ink"
+              >
+                {t('footer.source')}
+                <span className="sr-only"> {t('common.newTab')}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
 
       {navigate && (
         <nav

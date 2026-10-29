@@ -1,4 +1,4 @@
-import { Download, MessageSquareText, Pencil, Phone, Plus, Printer, ShieldCheck } from 'lucide-react'
+import { ArrowDown, Download, MessageSquareText, Pencil, Phone, Plus, Printer, ShieldCheck } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { crisisConfig } from '../config/crisisResources'
@@ -42,14 +42,45 @@ function ContactCard({ item }: { item: ContactItem }) {
   )
 }
 
-function PlanStep({ section, plan, onEdit }: { section: SectionDef; plan: SafetyPlan; onEdit: () => void }) {
+/**
+ * Steps 1 to 5 are used in order: if one step doesn't help, the person moves on to the next.
+ * Each of those cards ends with a pointer to the next step.
+ */
+function nextStepHint(section: SectionDef, t: T): string | null {
+  const next = section.step + 1
+  if (section.step === 1) return t('plan.startNext', { number: next })
+  if (section.step >= 2 && section.step <= 4) return t('plan.stillNeedHelp', { number: next })
+  return null
+}
+
+function PlanStep({
+  section,
+  plan,
+  onEdit,
+  isLast,
+}: {
+  section: SectionDef
+  plan: SafetyPlan
+  onEdit: () => void
+  isLast: boolean
+}) {
   const { t } = useTranslation()
   const photos = section.kind === 'text' && section.allowsPhotos ? plan.photos : []
   const isEmpty = plan[section.key].length === 0 && photos.length === 0
   const headingId = `plan-step-${section.step}`
+  const hint = nextStepHint(section, t)
+  // Reasons for living is the emotional anchor of the plan, so it gets a warm highlight.
+  const isReasons = section.key === 'reasonsForLiving'
 
   return (
-    <li className="card">
+    <li className={`card relative ${isReasons ? 'border-accent-soft! bg-accent-soft!' : ''}`}>
+      {/* A short line joining each card to the next, so the plan reads as one path. */}
+      {!isLast && (
+        <span
+          aria-hidden="true"
+          className="absolute -bottom-5 left-[2.4375rem] h-5 w-0.5 bg-line-strong/50 sm:left-[2.6875rem] print:hidden"
+        />
+      )}
       <div className="flex items-start gap-3">
         <span
           aria-hidden="true"
@@ -122,6 +153,13 @@ function PlanStep({ section, plan, onEdit }: { section: SectionDef; plan: Safety
             </li>
           ))}
         </ul>
+      )}
+
+      {hint && (
+        <p className="mt-5 flex items-center gap-2 border-t border-line pt-4 font-bold text-primary-ink">
+          <ArrowDown aria-hidden="true" className="size-5 shrink-0" />
+          {hint}
+        </p>
       )}
     </li>
   )
@@ -212,7 +250,7 @@ export function PlanScreen({ navigate }: { navigate: (route: Route) => void }) {
 
   if (isPlanEmpty(plan)) {
     return (
-      <>
+      <div className="mx-auto max-w-3xl">
         <h1 tabIndex={-1} className="text-3xl font-bold">
           {t('app.name')}
         </h1>
@@ -229,12 +267,12 @@ export function PlanScreen({ navigate }: { navigate: (route: Route) => void }) {
           </h2>
           <CrisisResourceList variant="compact" />
         </section>
-      </>
+      </div>
     )
   }
 
   return (
-    <>
+    <div className="mx-auto max-w-3xl">
       {/* Print-only header. */}
       <p className="mb-2 hidden text-sm print:block">{t('export.madeOn', { date: formatDate(today, language) })}</p>
       <div className="flex flex-wrap items-start justify-between gap-3">
@@ -249,11 +287,12 @@ export function PlanScreen({ navigate }: { navigate: (route: Route) => void }) {
       <p className="mt-3 text-xl leading-relaxed">{t('plan.intro')}</p>
 
       <ol className="mt-6 space-y-5">
-        {SECTIONS.map((section) => (
+        {SECTIONS.map((section, index) => (
           <PlanStep
             key={section.key}
             section={section}
             plan={plan}
+            isLast={index === SECTIONS.length - 1}
             onEdit={() => navigate({ name: 'build', step: section.step })}
           />
         ))}
@@ -261,6 +300,6 @@ export function PlanScreen({ navigate }: { navigate: (route: Route) => void }) {
 
       <p className="mt-6 hidden text-sm print:block">{t('export.notCare')}</p>
       <ExportPanel plan={plan} />
-    </>
+    </div>
   )
 }

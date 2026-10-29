@@ -25,8 +25,11 @@ describe('BuilderScreen', () => {
     renderStep(1)
     expect(screen.getByRole('heading', { level: 1, name: 'My warning signs' })).toBeInTheDocument()
     expect(screen.getByText(/What do you notice in yourself/)).toBeInTheDocument()
-    expect(screen.getByText('Step 1 of 7')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Step 1: My warning signs/ })).toHaveAttribute('aria-current', 'step')
+    // Phones get numbered circles and wide screens a named sidebar; CSS shows one at a time.
+    expect(screen.getAllByText('Step 1 of 7')).toHaveLength(2)
+    for (const link of screen.getAllByRole('link', { name: /Step 1: My warning signs/ })) {
+      expect(link).toHaveAttribute('aria-current', 'step')
+    }
   })
 
   it('adds an entry with Enter and saves it right away', async () => {

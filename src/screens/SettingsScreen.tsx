@@ -158,7 +158,7 @@ export function SettingsScreen({ onErased }: { onErased: () => void }) {
   const privacyPoints = t('settings.privacy.points', { returnObjects: true }) as readonly string[]
 
   return (
-    <>
+    <div className="mx-auto max-w-3xl">
       <h1 tabIndex={-1} className="text-3xl font-bold">
         {t('settings.title')}
       </h1>
@@ -236,6 +236,6 @@ export function SettingsScreen({ onErased }: { onErased: () => void }) {
         body={t('settings.erase.confirmBody')}
         confirmLabel={t('settings.erase.confirmButton')}
       />
-    </>
+    </div>
   )
 }

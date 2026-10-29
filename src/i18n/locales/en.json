@@ -17,7 +17,8 @@
     "callNumber": "Call {{number}}",
     "textNumber": "Text {{number}}",
     "textKeyword": "Text {{keyword}} to {{number}}",
-    "dismiss": "Dismiss"
+    "dismiss": "Dismiss",
+    "newTab": "(opens in a new tab)"
   },
   "nav": {
     "label": "Main menu",
@@ -50,13 +51,20 @@
     "withSomeone": "Safety plans work best when you make them with someone you trust. That could be a counselor, therapist, doctor, or someone close to you.",
     "notCare": "This app does not replace professional care. If you are in danger right now, call 911, or call or text 988.",
     "privacyTitle": "Your data stays on this device",
-    "privacyBody": "There are no accounts and no tracking. Nothing you type is sent to anyone. Your plan is saved only in this browser, on this device.",
+    "privacyBody": "No account and no tracking. Nothing you type is sent anywhere.",
     "privacyPin": "If other people use this device, you can add a PIN in Settings.",
     "stepsTitle": "What's in a safety plan",
     "start": "Start my plan",
     "continue": "Keep working on my plan",
     "view": "See my plan",
-    "language": "Language"
+    "language": "Language",
+    "heroTitle": "Your plan for getting through hard moments",
+    "reassure": "You can stop and come back any time. Everything saves as you go.",
+    "offlineTitle": "Works offline",
+    "offlineBody": "Open it any time, even without internet.",
+    "freeTitle": "Free, in English and Spanish",
+    "freeBody": "No sign-up and no cost.",
+    "previewLabel": "Example"
   },
   "builder": {
     "stepOf": "Step {{current}} of {{total}}",
@@ -254,7 +262,9 @@
     "editStep": "Edit step {{number}}",
     "nothingYet": "Nothing added yet.",
     "addToStep": "Add to this step",
-    "step": "Step {{number}}"
+    "step": "Step {{number}}",
+    "startNext": "When you notice these signs, go to step {{number}}.",
+    "stillNeedHelp": "Still not feeling safe? Go to step {{number}}."
   },
   "export": {
     "title": "Save or print a copy",
@@ -341,5 +351,10 @@
     "forgotBody": "Your PIN can't be recovered, because it was never sent anywhere. To get back in, you can erase this app's data and start a new plan. If you printed or downloaded your plan, you can use that copy to rebuild it.",
     "forgotErase": "Erase data and start over",
     "helpNote": "You don't need your PIN to get help. Tap “Need help now?” at any time."
+  },
+  "footer": {
+    "privacy": "Your plan stays on this device.",
+    "notCare": "Not a substitute for professional care.",
+    "source": "Source code"
   }
 }

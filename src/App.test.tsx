@@ -25,7 +25,9 @@ function renderApp({ hash = '', ...seed }: Parameters<typeof seedStorage>[1] & {
 describe('App', () => {
   it('shows the welcome screen on first visit, with the privacy notice', () => {
     renderApp()
-    expect(screen.getByRole('heading', { level: 1, name: 'My Safety Plan' })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { level: 1, name: 'Your plan for getting through hard moments' }),
+    ).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Your data stays on this device' })).toBeInTheDocument()
     expect(screen.getByText(/does not replace professional care/)).toBeInTheDocument()
   })
@@ -60,7 +62,9 @@ describe('App', () => {
     renderApp()
     await user.click(screen.getByRole('radio', { name: 'Español' }))
 
-    expect(await screen.findByRole('heading', { level: 1, name: 'Mi plan de seguridad' })).toBeInTheDocument()
+    expect(
+      await screen.findByRole('heading', { level: 1, name: 'Tu plan para superar los momentos difíciles' }),
+    ).toBeInTheDocument()
     expect(screen.getByRole('button', { name: '¿Necesitas ayuda ahora?' })).toBeInTheDocument()
     expect(document.documentElement.lang).toBe('es')
   })
@@ -99,7 +103,11 @@ describe('App', () => {
       await user.click(screen.getByRole('button', { name: 'Forgot your PIN?' }))
       await user.click(screen.getByRole('button', { name: 'Erase data and start over' }))
 
-      await waitFor(() => expect(screen.getByRole('button', { name: 'Start my plan' })).toBeInTheDocument())
+      await waitFor(() =>
+        expect(
+          screen.getByRole('heading', { level: 1, name: 'Your plan for getting through hard moments' }),
+        ).toBeInTheDocument(),
+      )
       for (const key of ALL_STORAGE_KEYS) expect(storage.getItem(key)).toBeNull()
     })
   })
