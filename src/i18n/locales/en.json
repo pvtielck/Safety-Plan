@@ -1,0 +1,345 @@
+{
+  "app": {
+    "name": "My Safety Plan"
+  },
+  "common": {
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "add": "Add",
+    "close": "Close",
+    "undo": "Undo",
+    "optional": "optional",
+    "skipToContent": "Skip to main content",
+    "callNumber": "Call {{number}}",
+    "textNumber": "Text {{number}}",
+    "textKeyword": "Text {{keyword}} to {{number}}",
+    "dismiss": "Dismiss"
+  },
+  "nav": {
+    "label": "Main menu",
+    "plan": "My plan",
+    "build": "Build",
+    "settings": "Settings",
+    "about": "About"
+  },
+  "help": {
+    "button": "Need help now?",
+    "title": "You don't have to face this alone",
+    "intro": "These free services can help right now, day or night.",
+    "region": "Phone numbers for {{region}}. Last checked {{date}}.",
+    "openPlan": "Open my safety plan",
+    "openPlanHint": "Your plan has steps you wrote for moments like this."
+  },
+  "quickExit": {
+    "button": "Quick exit",
+    "label": "Quick exit. Leaves this app right away and opens a search page."
+  },
+  "save": {
+    "saved": "Saved on this device",
+    "quota": "This device is out of space, so your last change was not saved. Try removing a photo.",
+    "unavailable": "This browser is blocking storage, so your plan can't be saved. Private browsing can cause this.",
+    "recovered": "Some saved data couldn't be read. A backup copy was kept on this device."
+  },
+  "welcome": {
+    "lead": "A safety plan is a short list of steps to follow when you are struggling or having thoughts of suicide.",
+    "aheadOfTime": "You write it ahead of time, while you feel calmer. Then it's ready when things get hard.",
+    "withSomeone": "Safety plans work best when you make them with someone you trust. That could be a counselor, therapist, doctor, or someone close to you.",
+    "notCare": "This app does not replace professional care. If you are in danger right now, call 911, or call or text 988.",
+    "privacyTitle": "Your data stays on this device",
+    "privacyBody": "There are no accounts and no tracking. Nothing you type is sent to anyone. Your plan is saved only in this browser, on this device.",
+    "privacyPin": "If other people use this device, you can add a PIN in Settings.",
+    "stepsTitle": "What's in a safety plan",
+    "start": "Start my plan",
+    "continue": "Keep working on my plan",
+    "view": "See my plan",
+    "language": "Language"
+  },
+  "builder": {
+    "stepOf": "Step {{current}} of {{total}}",
+    "stepsNav": "Plan steps",
+    "goToStep": "Step {{number}}: {{title}}",
+    "finish": "See my plan",
+    "useIdea": "Use",
+    "useIdeaLabel": "Use this idea: {{idea}}",
+    "yourList": "Your list",
+    "skipOk": "It's okay to skip a step and come back to it later.",
+    "filled": "(has entries)"
+  },
+  "entry": {
+    "editLabel": "Edit: {{item}}",
+    "deleteLabel": "Delete: {{item}}",
+    "moveUpLabel": "Move up: {{item}}",
+    "moveDownLabel": "Move down: {{item}}",
+    "editHeading": "Edit this entry",
+    "textLabel": "Your words",
+    "saveChanges": "Save changes",
+    "added": "Added “{{item}}”.",
+    "updated": "Saved “{{item}}”.",
+    "removed": "Removed “{{item}}”.",
+    "restored": "Put back “{{item}}”.",
+    "moved": "Moved “{{item}}” to number {{position}} of {{total}}.",
+    "empty": "Please type something, or use Delete to remove this entry."
+  },
+  "contact": {
+    "phoneLabel": "Phone number",
+    "nameRequired": "Please add a name.",
+    "call": "Call {{name}}",
+    "text": "Text {{name}}",
+    "callShort": "Call",
+    "textShort": "Text"
+  },
+  "photos": {
+    "title": "Photos that matter to me",
+    "intro": "Add photos of people, pets, or places you love. Photos are saved only on this device.",
+    "add": "Add a photo",
+    "adding": "Adding your photo…",
+    "captionLabel": "Describe this photo",
+    "captionHint": "Screen readers read this out loud.",
+    "defaultAlt": "A photo that matters to me",
+    "limit": "You can add up to {{max}} photos.",
+    "error": "That photo couldn't be added. Try a different one.",
+    "noSpace": "There isn't enough space on this device for that photo.",
+    "deleteLabel": "Delete photo: {{item}}",
+    "added": "Photo added."
+  },
+  "sections": {
+    "warningSigns": {
+      "title": "My warning signs",
+      "planTitle": "Notice my warning signs",
+      "short": "Signs that a hard time may be starting",
+      "explanation": "Warning signs are clues that a crisis may be coming. They can be thoughts, feelings, moods, or things you do. They can also be things that happen around you. Spotting them early gives you time to use the rest of your plan.",
+      "question": "What do you notice in yourself when things start to get really hard?",
+      "addLabel": "Add a warning sign",
+      "ideasTitle": "Ideas to get you started",
+      "ideasHint": "Pick one to start with, then change it into your own words.",
+      "ideas": [
+        "I stop answering texts and calls",
+        "I can't sleep, or I sleep all day",
+        "I feel like a burden to others",
+        "I feel trapped or hopeless",
+        "I start drinking or using more",
+        "After a fight with someone close to me"
+      ],
+      "tip": "Everyone's warning signs are different. Use your own words."
+    },
+    "copingStrategies": {
+      "title": "Things I can do on my own",
+      "planTitle": "Try things on my own",
+      "short": "Ways to calm down or take my mind off things",
+      "explanation": "These are things you can do by yourself to feel a little calmer, or to take your mind off problems for a while. You don't need anyone else for these. Small, simple things count.",
+      "question": "What helps you feel even a little better when you're on your own?",
+      "addLabel": "Add something I can do",
+      "ideasTitle": "Ideas to get you started",
+      "ideasHint": "Pick one to start with, then change it into your own words.",
+      "ideas": [
+        "Go for a walk outside",
+        "Listen to a favorite playlist",
+        "Take a warm shower",
+        "Breathe in for 4 counts and out for 6",
+        "Draw, write, or journal",
+        "Pray or meditate",
+        "Hold or play with my pet",
+        "Watch a show that makes me laugh"
+      ],
+      "tip": "Pick things you can do almost anywhere, even late at night."
+    },
+    "distractions": {
+      "title": "People and places that help me take a break",
+      "planTitle": "Connect with people and places",
+      "short": "Company and places that get me out of my head",
+      "explanation": "Being around other people can help, even if you don't talk about what's wrong. Add people you enjoy spending time with, and places where you feel okay being around others.",
+      "question": "Who or where helps you take your mind off things?",
+      "addLabel": "Add a person or place",
+      "nameLabel": "Name of person or place",
+      "detailLabel": "Notes, like an address or when to go",
+      "ideasTitle": "Ideas to get you started",
+      "ideasHint": "Pick one to start with, then change it into your own words.",
+      "ideas": [
+        "A coffee shop",
+        "The park",
+        "The library",
+        "The gym",
+        "A friend's house",
+        "My place of worship"
+      ],
+      "tip": "These don't have to be people you talk to about your feelings. Just being around others can help."
+    },
+    "helpers": {
+      "title": "People I can ask for help",
+      "planTitle": "Reach out for help",
+      "short": "People I trust to tell when I'm struggling",
+      "explanation": "These are people you trust and can tell when you're having a hard time. Try to list more than one person. That way, you have someone else to try if one person doesn't answer.",
+      "question": "Who could you call or text if you needed support?",
+      "addLabel": "Add a person",
+      "nameLabel": "Name",
+      "detailLabel": "Notes, like how you know them",
+      "ideasTitle": "People you might think about",
+      "ideasHint": "Think about who listens to you and makes you feel supported.",
+      "ideas": [
+        "Someone in my family",
+        "A close friend",
+        "Someone from school, a team, or work",
+        "Someone from my faith community",
+        "A neighbor"
+      ],
+      "tip": "It can help to tell these people ahead of time that they are part of your plan."
+    },
+    "professionals": {
+      "title": "Professionals and crisis lines",
+      "planTitle": "Contact a professional or crisis line",
+      "short": "Trained people and services I can contact",
+      "explanation": "These are people and services trained to help in a crisis. Add your counselor, therapist, doctor, or case manager if you have one. Free crisis lines are already included below.",
+      "question": "Who are the professionals in your life?",
+      "addLabel": "Add a professional or service",
+      "nameLabel": "Name",
+      "detailLabel": "Notes, like their role or address",
+      "ideasTitle": "Ideas to get you started",
+      "ideasHint": "Pick one to start with, then add their name and number.",
+      "ideas": [
+        "My therapist or counselor",
+        "My doctor or clinic",
+        "My case manager",
+        "The nearest emergency room"
+      ],
+      "tip": "If you have an appointment card or a clinic number, add it here.",
+      "crisisIncluded": "Always included: crisis lines, open 24/7"
+    },
+    "safeEnvironment": {
+      "title": "Making my space safer",
+      "planTitle": "Make my space safer",
+      "short": "Steps to keep myself safe in a crisis",
+      "explanation": "In a crisis, it helps to put time and distance between you and anything you could use to hurt yourself. You don't have to do this alone. A trusted person or a clinician can help you plan it.",
+      "question": "What steps could make your space safer?",
+      "addLabel": "Add a step",
+      "ideasTitle": "Ideas to get you started",
+      "ideasHint": "Pick one to start with, then change it into your own words.",
+      "ideas": [
+        "Ask someone I trust to keep my medicines for me",
+        "Keep firearms locked up, or stored away from my home",
+        "Give someone else the key or the code",
+        "Stay away from alcohol and drugs when I'm upset",
+        "Go to a safe place, or stay with someone, when I don't feel safe"
+      ],
+      "tip": "Making your space safer is one of the most helpful steps you can take. It's okay to ask for help with it."
+    },
+    "reasonsForLiving": {
+      "title": "My reasons for living",
+      "planTitle": "Remember my reasons for living",
+      "short": "People, hopes, and things that matter to me",
+      "explanation": "These are the people, pets, hopes, and things that matter to you. Reading them can remind you why it's worth getting through a hard moment.",
+      "question": "What makes life worth living for you, even a little?",
+      "addLabel": "Add a reason",
+      "ideasTitle": "Ideas to get you started",
+      "ideasHint": "Pick one to start with, then change it into your own words.",
+      "ideas": [
+        "My family",
+        "My pet",
+        "My friends",
+        "Things I still want to do",
+        "My faith",
+        "Music, art, or sports I love"
+      ],
+      "tip": "Your reasons can be big or small. Anything that matters to you counts."
+    }
+  },
+  "plan": {
+    "intro": "When things get hard, start with step 1. Keep going, one step at a time, until you feel safe.",
+    "emptyTitle": "Your plan is empty right now",
+    "emptyBody": "It only takes a few minutes to start. You can come back and add more any time.",
+    "edit": "Edit my plan",
+    "editStep": "Edit step {{number}}",
+    "nothingYet": "Nothing added yet.",
+    "addToStep": "Add to this step",
+    "step": "Step {{number}}"
+  },
+  "export": {
+    "title": "Save or print a copy",
+    "body": "A paper or PDF copy is handy to keep in a wallet, or to share with someone you trust.",
+    "privacy": "A copy outside this app isn't protected by your PIN. Keep it somewhere private.",
+    "print": "Print",
+    "pdf": "Download PDF",
+    "making": "Making your PDF…",
+    "done": "Your PDF was downloaded.",
+    "error": "Sorry, the PDF couldn't be made. Try Print instead, and choose “Save as PDF”.",
+    "madeOn": "Made on {{date}}",
+    "fileName": "my-plan",
+    "notCare": "This plan does not replace professional care. In an emergency, call 911."
+  },
+  "settings": {
+    "title": "Settings",
+    "language": {
+      "title": "Language"
+    },
+    "textSize": {
+      "title": "Text size",
+      "standard": "Standard",
+      "large": "Large",
+      "xlarge": "Extra large"
+    },
+    "theme": {
+      "title": "Colors",
+      "system": "Match my device",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "pin": {
+      "title": "PIN lock",
+      "explain": "A PIN adds a privacy screen, so someone who picks up this device can't easily see your plan.",
+      "notEncryption": "A PIN is not encryption. Your plan is still stored on this device without encryption, and someone with technical skills could read it. If you forget your PIN, the only way back in is to erase this app's data.",
+      "on": "PIN lock is on.",
+      "off": "PIN lock is off.",
+      "autoLock": "When the PIN is on, the app locks again after {{minutes}} minutes in the background.",
+      "set": "Set a PIN",
+      "change": "Change PIN",
+      "remove": "Turn off PIN",
+      "newLabel": "New 4-digit PIN",
+      "confirmLabel": "Type the PIN again",
+      "digitsHint": "Use 4 numbers. Avoid something easy to guess, like 1234 or your birthday.",
+      "mustBeDigits": "Use exactly 4 numbers.",
+      "noMatch": "The PINs don't match. Try again.",
+      "saving": "Saving…",
+      "saved": "Your PIN is set. You'll need it to open the app.",
+      "removed": "PIN lock is turned off."
+    },
+    "privacy": {
+      "title": "Your data stays on this device",
+      "points": [
+        "No accounts and no sign-in.",
+        "No tracking, ads, or analytics.",
+        "Your plan is never sent over the internet.",
+        "It only leaves this device if you print it, download it, or tap to call or text someone."
+      ],
+      "storageNote": "Your plan is saved in this browser. Clearing your browser's data will erase it, so keep a printed or downloaded copy just in case."
+    },
+    "erase": {
+      "title": "Delete all data",
+      "body": "This erases your plan, photos, PIN, and settings from this device.",
+      "button": "Delete all data",
+      "confirmTitle": "Delete everything?",
+      "confirmBody": "Your safety plan, photos, PIN, and settings will be erased from this device. This can't be undone. You may want to print or download a copy first.",
+      "confirmButton": "Yes, delete everything",
+      "done": "All data was deleted from this device."
+    },
+    "about": {
+      "title": "About this app",
+      "body": "My Safety Plan is a free tool based on the Safety Planning Intervention, a research-backed approach developed by Barbara Stanley and Gregory Brown. This app is not made or endorsed by them, and it is not a medical device.",
+      "version": "Version {{version}}"
+    }
+  },
+  "lock": {
+    "title": "Enter your PIN",
+    "intro": "Your plan is locked to keep it private.",
+    "pinLabel": "4-digit PIN",
+    "unlock": "Unlock",
+    "checking": "Checking…",
+    "wrong": "That PIN didn't work. Try again.",
+    "forgot": "Forgot your PIN?",
+    "forgotBody": "Your PIN can't be recovered, because it was never sent anywhere. To get back in, you can erase this app's data and start a new plan. If you printed or downloaded your plan, you can use that copy to rebuild it.",
+    "forgotErase": "Erase data and start over",
+    "helpNote": "You don't need your PIN to get help. Tap “Need help now?” at any time."
+  }
+}

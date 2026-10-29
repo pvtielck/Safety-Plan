@@ -1,0 +1,345 @@
+{
+  "app": {
+    "name": "Mi plan de seguridad"
+  },
+  "common": {
+    "back": "Atrás",
+    "next": "Siguiente",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Borrar",
+    "add": "Agregar",
+    "close": "Cerrar",
+    "undo": "Deshacer",
+    "optional": "opcional",
+    "skipToContent": "Saltar al contenido principal",
+    "callNumber": "Llamar al {{number}}",
+    "textNumber": "Enviar texto al {{number}}",
+    "textKeyword": "Enviar {{keyword}} al {{number}}",
+    "dismiss": "Cerrar aviso"
+  },
+  "nav": {
+    "label": "Menú principal",
+    "plan": "Mi plan",
+    "build": "Crear",
+    "settings": "Ajustes",
+    "about": "Acerca de"
+  },
+  "help": {
+    "button": "¿Necesitas ayuda ahora?",
+    "title": "No tienes que pasar por esto sin apoyo",
+    "intro": "Estos servicios gratuitos pueden ayudarte ahora mismo, de día o de noche.",
+    "region": "Números para {{region}}. Revisados el {{date}}.",
+    "openPlan": "Abrir mi plan de seguridad",
+    "openPlanHint": "Tu plan tiene pasos que escribiste para momentos como este."
+  },
+  "quickExit": {
+    "button": "Salida rápida",
+    "label": "Salida rápida. Sale de esta aplicación de inmediato y abre una página de búsqueda."
+  },
+  "save": {
+    "saved": "Guardado en este dispositivo",
+    "quota": "Este dispositivo no tiene espacio, así que tu último cambio no se guardó. Intenta quitar una foto.",
+    "unavailable": "Este navegador está bloqueando el almacenamiento, así que tu plan no se puede guardar. La navegación privada puede causar esto.",
+    "recovered": "No se pudieron leer algunos datos guardados. Se guardó una copia de respaldo en este dispositivo."
+  },
+  "welcome": {
+    "lead": "Un plan de seguridad es una lista corta de pasos para seguir cuando estás pasando por un momento muy difícil o tienes pensamientos de suicidio.",
+    "aheadOfTime": "Lo escribes con tiempo, cuando te sientes con más calma. Así está listo cuando las cosas se pongan difíciles.",
+    "withSomeone": "Los planes de seguridad funcionan mejor cuando los haces con alguien de confianza. Puede ser alguien de tu equipo de salud, como tu terapeuta, o una persona cercana a ti.",
+    "notCare": "Esta aplicación no reemplaza la atención profesional. Si estás en peligro ahora mismo, llama al 911, o llama o envía un texto al 988.",
+    "privacyTitle": "Tus datos se quedan en este dispositivo",
+    "privacyBody": "No hay cuentas ni rastreo. Nada de lo que escribes se envía a nadie. Tu plan se guarda solo en este navegador, en este dispositivo.",
+    "privacyPin": "Si otras personas usan este dispositivo, puedes agregar un PIN en Ajustes.",
+    "stepsTitle": "Qué incluye un plan de seguridad",
+    "start": "Empezar mi plan",
+    "continue": "Seguir con mi plan",
+    "view": "Ver mi plan",
+    "language": "Idioma"
+  },
+  "builder": {
+    "stepOf": "Paso {{current}} de {{total}}",
+    "stepsNav": "Pasos del plan",
+    "goToStep": "Paso {{number}}: {{title}}",
+    "finish": "Ver mi plan",
+    "useIdea": "Usar",
+    "useIdeaLabel": "Usar esta idea: {{idea}}",
+    "yourList": "Tu lista",
+    "skipOk": "Está bien saltar un paso y volver a él más tarde.",
+    "filled": "(tiene entradas)"
+  },
+  "entry": {
+    "editLabel": "Editar: {{item}}",
+    "deleteLabel": "Borrar: {{item}}",
+    "moveUpLabel": "Subir: {{item}}",
+    "moveDownLabel": "Bajar: {{item}}",
+    "editHeading": "Editar esta entrada",
+    "textLabel": "Tus palabras",
+    "saveChanges": "Guardar cambios",
+    "added": "Se agregó “{{item}}”.",
+    "updated": "Se guardó “{{item}}”.",
+    "removed": "Se quitó “{{item}}”.",
+    "restored": "Se volvió a poner “{{item}}”.",
+    "moved": "“{{item}}” ahora es el número {{position}} de {{total}}.",
+    "empty": "Escribe algo, o usa Borrar para quitar esta entrada."
+  },
+  "contact": {
+    "phoneLabel": "Número de teléfono",
+    "nameRequired": "Por favor, agrega un nombre.",
+    "call": "Llamar a {{name}}",
+    "text": "Enviar texto a {{name}}",
+    "callShort": "Llamar",
+    "textShort": "Enviar texto"
+  },
+  "photos": {
+    "title": "Fotos que me importan",
+    "intro": "Agrega fotos de personas, mascotas o lugares que quieres. Las fotos se guardan solo en este dispositivo.",
+    "add": "Agregar una foto",
+    "adding": "Agregando tu foto…",
+    "captionLabel": "Describe esta foto",
+    "captionHint": "Los lectores de pantalla leen esto en voz alta.",
+    "defaultAlt": "Una foto que me importa",
+    "limit": "Puedes agregar hasta {{max}} fotos.",
+    "error": "No se pudo agregar esa foto. Intenta con otra.",
+    "noSpace": "No hay suficiente espacio en este dispositivo para esa foto.",
+    "deleteLabel": "Borrar foto: {{item}}",
+    "added": "Se agregó la foto."
+  },
+  "sections": {
+    "warningSigns": {
+      "title": "Mis señales de alerta",
+      "planTitle": "Fijarme en mis señales de alerta",
+      "short": "Señales de que se acerca un momento difícil",
+      "explanation": "Las señales de alerta son pistas de que una crisis podría estar cerca. Pueden ser pensamientos, sentimientos, cambios de ánimo o cosas que haces. También pueden ser cosas que pasan a tu alrededor. Notarlas a tiempo te da tiempo para usar el resto de tu plan.",
+      "question": "¿Qué notas en ti cuando las cosas empiezan a ponerse muy difíciles?",
+      "addLabel": "Agregar una señal de alerta",
+      "ideasTitle": "Ideas para empezar",
+      "ideasHint": "Elige una para empezar y luego cámbiala con tus propias palabras.",
+      "ideas": [
+        "Dejo de contestar mensajes y llamadas",
+        "No puedo dormir, o duermo todo el día",
+        "Siento que soy una carga para los demás",
+        "Siento que no hay salida o que no hay esperanza",
+        "Empiezo a tomar o a usar drogas más de lo normal",
+        "Después de una pelea con alguien cercano a mí"
+      ],
+      "tip": "Las señales de alerta son diferentes para cada persona. Usa tus propias palabras."
+    },
+    "copingStrategies": {
+      "title": "Cosas que puedo hacer por mi cuenta",
+      "planTitle": "Intentar cosas por mi cuenta",
+      "short": "Formas de calmarme o de distraer mi mente",
+      "explanation": "Son cosas que puedes hacer por tu cuenta para sentirte con un poco más de calma, o para dejar de pensar en tus problemas por un rato. No necesitas a nadie más para hacerlas. Las cosas pequeñas y sencillas también cuentan.",
+      "question": "¿Qué te ayuda a sentirte aunque sea un poco mejor cuando no hay nadie contigo?",
+      "addLabel": "Agregar algo que puedo hacer",
+      "ideasTitle": "Ideas para empezar",
+      "ideasHint": "Elige una para empezar y luego cámbiala con tus propias palabras.",
+      "ideas": [
+        "Salir a caminar",
+        "Escuchar mi música favorita",
+        "Darme un baño caliente",
+        "Respirar: inhalar contando hasta 4 y exhalar contando hasta 6",
+        "Dibujar, escribir o llevar un diario",
+        "Rezar o meditar",
+        "Abrazar o jugar con mi mascota",
+        "Ver un programa que me haga reír"
+      ],
+      "tip": "Elige cosas que puedas hacer casi en cualquier lugar, incluso de noche."
+    },
+    "distractions": {
+      "title": "Personas y lugares que me ayudan a despejarme",
+      "planTitle": "Buscar personas y lugares",
+      "short": "Compañía y lugares que me ayudan a salir de mi cabeza",
+      "explanation": "Estar con otras personas puede ayudar, aunque no hables de lo que te pasa. Agrega personas con quienes te gusta pasar el tiempo, y lugares donde te sientes bien entre otras personas.",
+      "question": "¿Quién o qué lugar te ayuda a dejar de pensar en tus problemas?",
+      "addLabel": "Agregar una persona o un lugar",
+      "nameLabel": "Nombre de la persona o del lugar",
+      "detailLabel": "Notas, como una dirección o cuándo ir",
+      "ideasTitle": "Ideas para empezar",
+      "ideasHint": "Elige una para empezar y luego cámbiala con tus propias palabras.",
+      "ideas": [
+        "Una cafetería",
+        "El parque",
+        "La biblioteca",
+        "El gimnasio",
+        "La casa de una amistad",
+        "Mi iglesia o lugar de culto"
+      ],
+      "tip": "No tienen que ser personas con quienes hables de tus sentimientos. Solo estar cerca de otras personas puede ayudar."
+    },
+    "helpers": {
+      "title": "Personas a quienes puedo pedir ayuda",
+      "planTitle": "Pedir ayuda",
+      "short": "Personas de confianza a quienes puedo contarles cuando estoy mal",
+      "explanation": "Son personas de confianza a quienes puedes contarles que estás pasando por un momento difícil. Trata de anotar a más de una persona. Así tienes a quién más llamar si alguien no contesta.",
+      "question": "¿A quién podrías llamar o escribirle si necesitaras apoyo?",
+      "addLabel": "Agregar una persona",
+      "nameLabel": "Nombre",
+      "detailLabel": "Notas, como de dónde se conocen",
+      "ideasTitle": "Personas en quienes podrías pensar",
+      "ideasHint": "Piensa en quién te escucha y con quién sientes apoyo.",
+      "ideas": [
+        "Alguien de mi familia",
+        "Una amistad cercana",
+        "Alguien de mi escuela, mi equipo o mi trabajo",
+        "Alguien de mi comunidad de fe",
+        "Alguien de mi vecindario"
+      ],
+      "tip": "Puede ayudar decirles a estas personas desde antes que forman parte de tu plan."
+    },
+    "professionals": {
+      "title": "Profesionales y líneas de crisis",
+      "planTitle": "Contactar a profesionales o a una línea de crisis",
+      "short": "Personas y servicios capacitados que puedo contactar",
+      "explanation": "Son personas y servicios capacitados para ayudar en una crisis. Si tienes terapeuta, clínica, equipo médico o alguien que maneja tu caso, agrégalos aquí. Las líneas de crisis gratuitas ya están incluidas abajo.",
+      "question": "¿Qué profesionales forman parte de tu vida?",
+      "addLabel": "Agregar a profesionales o un servicio",
+      "nameLabel": "Nombre",
+      "detailLabel": "Notas, como su función o su dirección",
+      "ideasTitle": "Ideas para empezar",
+      "ideasHint": "Elige una para empezar y luego agrega su nombre y número.",
+      "ideas": [
+        "Mi terapeuta",
+        "Mi clínica o centro de salud",
+        "Quien maneja mi caso",
+        "La sala de emergencias más cercana"
+      ],
+      "tip": "Si tienes una tarjeta de citas o el número de una clínica, agrégalo aquí.",
+      "crisisIncluded": "Siempre incluidas: líneas de crisis, abiertas las 24 horas"
+    },
+    "safeEnvironment": {
+      "title": "Hacer mi espacio más seguro",
+      "planTitle": "Hacer mi espacio más seguro",
+      "short": "Pasos para protegerme en una crisis",
+      "explanation": "En una crisis, ayuda poner tiempo y distancia entre tú y cualquier cosa que podrías usar para hacerte daño. No tienes que hacerlo por tu cuenta. Una persona de confianza o una persona profesional puede ayudarte a planearlo.",
+      "question": "¿Qué pasos podrían hacer que tu espacio sea más seguro?",
+      "addLabel": "Agregar un paso",
+      "ideasTitle": "Ideas para empezar",
+      "ideasHint": "Elige una para empezar y luego cámbiala con tus propias palabras.",
+      "ideas": [
+        "Pedirle a alguien de confianza que guarde mis medicinas",
+        "Guardar las armas de fuego bajo llave, o fuera de mi casa",
+        "Darle a otra persona la llave o la clave",
+        "Evitar el alcohol y las drogas cuando estoy mal",
+        "Ir a un lugar seguro, o quedarme con alguien, cuando no me siento a salvo"
+      ],
+      "tip": "Hacer tu espacio más seguro es uno de los pasos más útiles que puedes dar. Está bien pedir ayuda para hacerlo."
+    },
+    "reasonsForLiving": {
+      "title": "Mis razones para vivir",
+      "planTitle": "Recordar mis razones para vivir",
+      "short": "Personas, sueños y cosas que me importan",
+      "explanation": "Son las personas, mascotas, sueños y cosas que te importan. Leerlas puede recordarte por qué vale la pena superar un momento difícil.",
+      "question": "¿Qué hace que la vida valga la pena para ti, aunque sea un poco?",
+      "addLabel": "Agregar una razón",
+      "ideasTitle": "Ideas para empezar",
+      "ideasHint": "Elige una para empezar y luego cámbiala con tus propias palabras.",
+      "ideas": [
+        "Mi familia",
+        "Mi mascota",
+        "Mis amistades",
+        "Cosas que todavía quiero hacer",
+        "Mi fe",
+        "La música, el arte o el deporte que me gusta"
+      ],
+      "tip": "Tus razones pueden ser grandes o pequeñas. Todo lo que te importa cuenta."
+    }
+  },
+  "plan": {
+    "intro": "Cuando las cosas se pongan difíciles, empieza por el paso 1. Sigue paso a paso hasta que te sientas a salvo.",
+    "emptyTitle": "Tu plan está vacío por ahora",
+    "emptyBody": "Empezar solo toma unos minutos. Puedes volver y agregar más cuando quieras.",
+    "edit": "Editar mi plan",
+    "editStep": "Editar el paso {{number}}",
+    "nothingYet": "Todavía no hay nada aquí.",
+    "addToStep": "Agregar a este paso",
+    "step": "Paso {{number}}"
+  },
+  "export": {
+    "title": "Guardar o imprimir una copia",
+    "body": "Una copia en papel o en PDF es útil para llevarla en la cartera, o para compartirla con alguien de confianza.",
+    "privacy": "Una copia fuera de esta aplicación no está protegida por tu PIN. Guárdala en un lugar privado.",
+    "print": "Imprimir",
+    "pdf": "Descargar PDF",
+    "making": "Preparando tu PDF…",
+    "done": "Se descargó tu PDF.",
+    "error": "Lo sentimos, no se pudo crear el PDF. Intenta con Imprimir y elige “Guardar como PDF”.",
+    "madeOn": "Hecho el {{date}}",
+    "fileName": "mi-plan",
+    "notCare": "Este plan no reemplaza la atención profesional. En una emergencia, llama al 911."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "language": {
+      "title": "Idioma"
+    },
+    "textSize": {
+      "title": "Tamaño del texto",
+      "standard": "Normal",
+      "large": "Grande",
+      "xlarge": "Muy grande"
+    },
+    "theme": {
+      "title": "Colores",
+      "system": "Igual que mi dispositivo",
+      "light": "Claro",
+      "dark": "Oscuro"
+    },
+    "pin": {
+      "title": "Bloqueo con PIN",
+      "explain": "Un PIN agrega una pantalla de privacidad, para que alguien que tome este dispositivo no pueda ver tu plan fácilmente.",
+      "notEncryption": "Un PIN no es cifrado. Tu plan sigue guardado en este dispositivo sin cifrar, y alguien con conocimientos técnicos podría leerlo. Si olvidas tu PIN, la única forma de volver a entrar es borrar los datos de esta aplicación.",
+      "on": "El bloqueo con PIN está activado.",
+      "off": "El bloqueo con PIN está desactivado.",
+      "autoLock": "Con el PIN activado, la aplicación se bloquea de nuevo después de {{minutes}} minutos en segundo plano.",
+      "set": "Crear un PIN",
+      "change": "Cambiar el PIN",
+      "remove": "Desactivar el PIN",
+      "newLabel": "PIN nuevo de 4 dígitos",
+      "confirmLabel": "Escribe el PIN otra vez",
+      "digitsHint": "Usa 4 números. Evita algo fácil de adivinar, como 1234 o tu fecha de nacimiento.",
+      "mustBeDigits": "Usa exactamente 4 números.",
+      "noMatch": "Los PIN no coinciden. Inténtalo de nuevo.",
+      "saving": "Guardando…",
+      "saved": "Tu PIN está listo. Lo vas a necesitar para abrir la aplicación.",
+      "removed": "El bloqueo con PIN está desactivado."
+    },
+    "privacy": {
+      "title": "Tus datos se quedan en este dispositivo",
+      "points": [
+        "No hay cuentas ni inicio de sesión.",
+        "No hay rastreo, anuncios ni análisis de uso.",
+        "Tu plan nunca se envía por internet.",
+        "Solo sale de este dispositivo si lo imprimes, lo descargas, o tocas para llamar o enviar un texto a alguien."
+      ],
+      "storageNote": "Tu plan se guarda en este navegador. Si borras los datos del navegador, se borrará tu plan. Por eso, es buena idea tener una copia impresa o descargada."
+    },
+    "erase": {
+      "title": "Borrar todos los datos",
+      "body": "Esto borra tu plan, tus fotos, tu PIN y tus ajustes de este dispositivo.",
+      "button": "Borrar todos los datos",
+      "confirmTitle": "¿Borrar todo?",
+      "confirmBody": "Tu plan de seguridad, tus fotos, tu PIN y tus ajustes se borrarán de este dispositivo. Esto no se puede deshacer. Tal vez quieras imprimir o descargar una copia antes.",
+      "confirmButton": "Sí, borrar todo",
+      "done": "Se borraron todos los datos de este dispositivo."
+    },
+    "about": {
+      "title": "Acerca de esta aplicación",
+      "body": "Mi plan de seguridad es una herramienta gratuita basada en la Intervención de Planificación de Seguridad, un método respaldado por investigaciones y creado por Barbara Stanley y Gregory Brown. Esta aplicación no fue hecha ni avalada por ellos, y no es un dispositivo médico.",
+      "version": "Versión {{version}}"
+    }
+  },
+  "lock": {
+    "title": "Escribe tu PIN",
+    "intro": "Tu plan está bloqueado para mantenerlo privado.",
+    "pinLabel": "PIN de 4 dígitos",
+    "unlock": "Desbloquear",
+    "checking": "Revisando…",
+    "wrong": "Ese PIN no funcionó. Inténtalo de nuevo.",
+    "forgot": "¿Olvidaste tu PIN?",
+    "forgotBody": "Tu PIN no se puede recuperar, porque nunca se envió a ningún lugar. Para volver a entrar, puedes borrar los datos de esta aplicación y empezar un plan nuevo. Si imprimiste o descargaste tu plan, puedes usar esa copia para hacerlo otra vez.",
+    "forgotErase": "Borrar datos y empezar de nuevo",
+    "helpNote": "No necesitas tu PIN para pedir ayuda. Toca “¿Necesitas ayuda ahora?” en cualquier momento."
+  }
+}

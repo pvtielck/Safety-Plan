@@ -1,0 +1,253 @@
+@import 'tailwindcss';
+/* Atkinson Hyperlegible Next was designed by the Braille Institute for low-vision readers.
+   Self-hosted (no font CDN) so the app makes no third-party requests and works offline. */
+@import '@fontsource/atkinson-hyperlegible-next/latin-400.css';
+@import '@fontsource/atkinson-hyperlegible-next/latin-700.css';
+@import '@fontsource/atkinson-hyperlegible-next/latin-ext-400.css';
+@import '@fontsource/atkinson-hyperlegible-next/latin-ext-700.css';
+
+/*
+ * Design tokens. Warm, calm, non-clinical. Red is reserved for emergency (911) actions only.
+ * Every text/background pair meets WCAG 2.1 AA (4.5:1), and borders on form controls meet
+ * the 3:1 non-text contrast requirement. See README "Accessibility" for the measured ratios.
+ */
+:root {
+  color-scheme: light;
+  --c-bg: #fbf7f2;
+  --c-surface: #ffffff;
+  --c-surface-muted: #f3ede5;
+  --c-border: #e4dbd0;
+  --c-border-strong: #857a6e;
+  --c-ink: #2a2521;
+  --c-ink-muted: #5b534b;
+  --c-primary: #2c6b65;
+  --c-primary-hover: #235853;
+  --c-on-primary: #ffffff;
+  --c-primary-soft: #e2efec;
+  --c-primary-ink: #1f524d;
+  --c-help: #5a3d8a;
+  --c-help-hover: #4a3173;
+  --c-on-help: #ffffff;
+  --c-help-soft: #efe9f7;
+  --c-accent-soft: #fbeedd;
+  --c-emergency: #b42318;
+  --c-emergency-hover: #96190f;
+  --c-on-emergency: #ffffff;
+  --c-warning-soft: #fdf0d5;
+  --c-warning-ink: #6b4504;
+  --c-focus: #1d4fa8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --c-bg: #191715;
+    --c-surface: #23201d;
+    --c-surface-muted: #2c2824;
+    --c-border: #3d3732;
+    --c-border-strong: #948a7f;
+    --c-ink: #f3ede6;
+    --c-ink-muted: #cbc1b6;
+    --c-primary: #82cbc2;
+    --c-primary-hover: #a1dad3;
+    --c-on-primary: #10211f;
+    --c-primary-soft: #1e3532;
+    --c-primary-ink: #a8e0d9;
+    --c-help: #c9b6ef;
+    --c-help-hover: #dacdf5;
+    --c-on-help: #1d1430;
+    --c-help-soft: #2e2641;
+    --c-accent-soft: #3a2e20;
+    --c-emergency: #b42318;
+    --c-emergency-hover: #c9372b;
+    --c-on-emergency: #ffffff;
+    --c-warning-soft: #3d3016;
+    --c-warning-ink: #f5d48f;
+    --c-focus: #9cc2ff;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --c-bg: #191715;
+  --c-surface: #23201d;
+  --c-surface-muted: #2c2824;
+  --c-border: #3d3732;
+  --c-border-strong: #948a7f;
+  --c-ink: #f3ede6;
+  --c-ink-muted: #cbc1b6;
+  --c-primary: #82cbc2;
+  --c-primary-hover: #a1dad3;
+  --c-on-primary: #10211f;
+  --c-primary-soft: #1e3532;
+  --c-primary-ink: #a8e0d9;
+  --c-help: #c9b6ef;
+  --c-help-hover: #dacdf5;
+  --c-on-help: #1d1430;
+  --c-help-soft: #2e2641;
+  --c-accent-soft: #3a2e20;
+  --c-emergency: #b42318;
+  --c-emergency-hover: #c9372b;
+  --c-on-emergency: #ffffff;
+  --c-warning-soft: #3d3016;
+  --c-warning-ink: #f5d48f;
+  --c-focus: #9cc2ff;
+}
+
+@theme inline {
+  --font-sans: 'Atkinson Hyperlegible Next', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-surface-muted: var(--c-surface-muted);
+  --color-line: var(--c-border);
+  --color-line-strong: var(--c-border-strong);
+  --color-ink: var(--c-ink);
+  --color-ink-muted: var(--c-ink-muted);
+  --color-primary: var(--c-primary);
+  --color-primary-hover: var(--c-primary-hover);
+  --color-on-primary: var(--c-on-primary);
+  --color-primary-soft: var(--c-primary-soft);
+  --color-primary-ink: var(--c-primary-ink);
+  --color-help: var(--c-help);
+  --color-help-hover: var(--c-help-hover);
+  --color-on-help: var(--c-on-help);
+  --color-help-soft: var(--c-help-soft);
+  --color-accent-soft: var(--c-accent-soft);
+  --color-emergency: var(--c-emergency);
+  --color-emergency-hover: var(--c-emergency-hover);
+  --color-on-emergency: var(--c-on-emergency);
+  --color-warning-soft: var(--c-warning-soft);
+  --color-warning-ink: var(--c-warning-ink);
+  --color-focus: var(--c-focus);
+}
+
+/* User-selected text size scales every rem-based size in the app. */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Keep focused elements clear of the sticky header and the bottom menu when tabbing. */
+  scroll-padding-top: 8.5rem;
+  scroll-padding-bottom: 6rem;
+}
+html[data-text-size='large'] {
+  font-size: 112.5%;
+}
+html[data-text-size='xlarge'] {
+  font-size: 125%;
+}
+
+body {
+  margin: 0;
+  background: var(--c-bg);
+  color: var(--c-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* A thick, high-contrast focus ring for keyboard users on every interactive element. */
+:focus-visible {
+  outline: 3px solid var(--c-focus);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+/* Headings receive programmatic focus on page change; they don't need a ring. */
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-center text-base
+    font-bold transition-colors motion-reduce:transition-none disabled:cursor-not-allowed disabled:opacity-60;
+}
+@utility btn-primary {
+  @apply btn bg-primary text-on-primary hover:bg-primary-hover;
+}
+@utility btn-secondary {
+  @apply btn border-2 border-line-strong bg-surface text-ink hover:bg-surface-muted;
+}
+@utility btn-quiet {
+  @apply btn bg-transparent px-3 text-primary-ink underline-offset-4 hover:bg-primary-soft hover:underline;
+}
+@utility btn-help {
+  @apply btn bg-help text-on-help hover:bg-help-hover;
+}
+@utility btn-emergency {
+  @apply btn bg-emergency text-on-emergency hover:bg-emergency-hover;
+}
+@utility icon-btn {
+  @apply inline-flex size-12 shrink-0 items-center justify-center rounded-xl text-ink-muted transition-colors
+    hover:bg-surface-muted hover:text-ink motion-reduce:transition-none disabled:cursor-not-allowed disabled:opacity-35;
+}
+@utility card {
+  @apply rounded-2xl border border-line bg-surface p-5 shadow-[0_1px_2px_rgb(0_0_0/0.04)] sm:p-6;
+}
+@utility field-label {
+  @apply mb-1.5 block font-bold text-ink;
+}
+@utility field-hint {
+  @apply mb-1.5 block text-sm text-ink-muted;
+}
+@utility field {
+  @apply block w-full rounded-xl border-2 border-line-strong bg-surface px-4 py-3 text-base text-ink
+    placeholder:text-ink-muted;
+  &:focus-visible {
+    outline-offset: 1px;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+dialog::backdrop {
+  background: rgb(20 16 12 / 0.55);
+}
+
+/* Respect "reduce motion" everywhere, including third-party styles. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print: plain black on white, no app chrome, no buttons. */
+@media print {
+  :root,
+  :root[data-theme='dark'],
+  :root:not([data-theme='light']) {
+    color-scheme: light;
+    --c-bg: #ffffff;
+    --c-surface: #ffffff;
+    --c-surface-muted: #ffffff;
+    --c-border: #999999;
+    --c-ink: #000000;
+    --c-ink-muted: #333333;
+    --c-primary-ink: #000000;
+    --c-primary-soft: #ffffff;
+    --c-help-soft: #ffffff;
+    --c-accent-soft: #ffffff;
+  }
+  html {
+    font-size: 11pt;
+  }
+  .card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+  a[href^='tel:']::after {
+    content: '';
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>My Safety Plan</title>
+    <meta
+      name="description"
+      content="A private safety plan that stays on your device. Works offline. English and Spanish."
+    />
+    <!-- Never tell other sites that someone came from a safety-planning app (e.g. after Quick exit). -->
+    <meta name="referrer" content="no-referrer" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fbf7f2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#191715" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 1rem; font-family: system-ui, sans-serif">
+        My Safety Plan needs JavaScript to run. If you need help right now, call or text 988, or
+        call 911.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
