@@ -69,6 +69,16 @@ describe('App', () => {
     expect(document.documentElement.lang).toBe('es')
   })
 
+  it("offers Print instead of a PDF in Korean, which the PDF's fonts can't draw", async () => {
+    renderApp({ plan, settings: { welcomeSeen: true, language: 'ko' } })
+
+    expect(await screen.findByRole('heading', { name: '사본 저장 또는 인쇄' })).toBeInTheDocument()
+    expect(document.documentElement.lang).toBe('ko')
+    expect(screen.getByRole('button', { name: '인쇄' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'PDF 다운로드' })).not.toBeInTheDocument()
+    expect(screen.getByText(/PDF로 저장하려면/)).toBeInTheDocument()
+  })
+
   describe('with a PIN', () => {
     it('hides the plan until the right PIN is entered, but never hides crisis help', async () => {
       const user = userEvent.setup()

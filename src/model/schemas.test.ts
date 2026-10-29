@@ -2,6 +2,7 @@ import { loadState } from '../lib/storage'
 import { MemoryStorage } from '../test/utils'
 import { createEmptyPlan } from './plan'
 import { normalizePlan, normalizeSettings, planSchema, settingsSchema } from './schemas'
+import { LANGUAGES } from './settings'
 
 describe('normalizePlan', () => {
   it('returns an empty plan for anything that is not an object', () => {
@@ -41,14 +42,14 @@ describe('normalizePlan', () => {
 describe('normalizeSettings', () => {
   it('falls back to defaults for unknown values and never keeps a broken PIN record', () => {
     const settings = normalizeSettings({
-      language: 'fr',
+      language: 'de',
       textSize: 'huge',
       theme: 'dark',
       pin: { hash: 'abc' },
       welcomeSeen: 'yes',
     })
     expect(settings).toMatchObject({ textSize: 'standard', theme: 'dark', pin: null, welcomeSeen: false })
-    expect(['en', 'es']).toContain(settings.language)
+    expect(LANGUAGES).toContain(settings.language)
   })
 
   it('keeps a complete PIN record', () => {

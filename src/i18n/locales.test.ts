@@ -1,6 +1,8 @@
 import { SECTIONS } from '../model/plan'
+import { LANGUAGES } from '../model/settings'
+import { resources } from '.'
 import en from './locales/en.json'
-import es from './locales/es.json'
+import fr from './locales/fr.json'
 
 type Json = string | Json[] | { [key: string]: Json }
 
@@ -22,30 +24,42 @@ function strings(value: Json): string[] {
 
 const placeholders = (text: string) => [...text.matchAll(/\{\{(\w+)\}\}/g)].map((m) => m[1]).sort()
 
+const translations = LANGUAGES.filter((language) => language !== 'en').map(
+  (language) => [language, resources[language].translation as Json] as const,
+)
+
 describe('translations', () => {
-  it('English and Spanish have exactly the same keys', () => {
-    expect(shape(es as Json)).toEqual(shape(en as Json))
+  it.each(translations)('%s has exactly the same keys as English', (_, locale) => {
+    expect(shape(locale)).toEqual(shape(en as Json))
   })
 
   it('has no empty strings', () => {
-    for (const text of [...strings(en as Json), ...strings(es as Json)]) expect(text.trim()).not.toBe('')
+    for (const language of LANGUAGES) {
+      for (const text of strings(resources[language].translation as Json)) expect(text.trim()).not.toBe('')
+    }
   })
 
-  it('uses the same {{placeholders}} in both languages', () => {
+  it.each(translations)('%s uses the same {{placeholders}} as English', (_, locale) => {
     const enShape = shape(en as Json)
     const get = (root: Json, path: string) =>
       path.split('.').reduce((node, key) => (node as Record<string, Json>)[key]!, root) as string
     const mismatched = Object.keys(enShape).filter(
       (path) =>
         enShape[path] === 'string' &&
-        placeholders(get(es as Json, path)).join() !== placeholders(get(en as Json, path)).join(),
+        placeholders(get(locale, path)).join() !== placeholders(get(en as Json, path)).join(),
     )
     expect(mismatched).toEqual([])
   })
 
+  it('French keeps ? ! : ; and « » attached to their words with a non-breaking space', () => {
+    // A plain space would let "?" wrap onto a line of its own, especially at large text sizes.
+    const loose = strings(fr as Json).filter((text) => / [?!:;»]|« /.test(text))
+    expect(loose).toEqual([])
+  })
+
   it('has content for every plan section, with at least three ideas each', () => {
     for (const { key } of SECTIONS) {
-      for (const locale of [en, es]) {
+      for (const { translation: locale } of Object.values(resources)) {
         const section = locale.sections[key]
         expect(section.title).toBeTruthy()
         expect(section.explanation).toBeTruthy()

@@ -4,9 +4,10 @@ import type { jsPDF } from 'jspdf'
  * Builds a printable PDF of the plan entirely on the device. Nothing is uploaded.
  *
  * The caller passes already-translated strings, so this file only does layout. jsPDF's
- * built-in fonts cover Latin-1, which is enough for English and Spanish (á, é, ñ, ¿, ¡...).
- * Characters outside it (emoji, other scripts) are dropped from the PDF. The Print option
- * keeps them, and the README notes this limitation.
+ * built-in fonts cover Latin-1, which is enough for English, Spanish, and French (á, ñ, ¿, ç,
+ * «...). Characters outside it (emoji, other scripts) are dropped from the PDF, so Korean and
+ * Chinese aren't offered a PDF at all (see PDF_LANGUAGES). The Print option keeps everything,
+ * and the README notes this limitation.
  */
 
 export interface PdfStep {
@@ -45,6 +46,9 @@ const REPLACEMENTS: Record<string, string> = {
   '\u2026': '...', // ellipsis
   '\u2022': '-', // bullet
   '\u00a0': ' ', // non-breaking space
+  '\u202f': ' ', // narrow non-breaking space (French)
+  '\u0153': 'oe', // \u0153, as in "c\u0153ur" (not in Latin-1)
+  '\u0152': 'OE', // \u0152
 }
 
 /** Printable ASCII, Latin-1 letters and symbols, and newlines. */

@@ -1,6 +1,7 @@
 # My Safety Plan
 
-A private, bilingual (English/Spanish) safety-planning app that works offline. It is inspired by the
+A private, multilingual (English, Spanish, French, Korean, and Simplified Chinese) safety-planning app that
+works offline. It is inspired by the
 six-step structure of the Stanley-Brown Safety Planning Intervention.
 
 **Live site: https://pvtielck.github.io/Safety-Plan/**
@@ -23,7 +24,7 @@ Paper plans get lost, and many existing apps require accounts or collect data. *
 small, free, installable web app that helps someone write and keep a plan:
 
 - **privately:** nothing ever leaves the device unless the person chooses to print, download, call, or text;
-- **accessibly:** plain language, large text, screen-reader support, and English and Spanish;
+- **accessibly:** plain language, large text, screen-reader support, and five languages;
 - **reliably:** it works with no internet connection, which is often exactly when it's needed.
 
 I built it as a portfolio project for a Master of Social Work application, to show how social work values
@@ -54,14 +55,16 @@ It is built to be read at a glance during distress: "start with step 1, keep goi
 
 **"Need help now?"**: a button on every screen, including the PIN lock screen, that opens a panel
 with 988 (call or text), Crisis Text Line, the LA County DMH 24/7 Help Line, and 911. Keyboard focus starts on
-"Call 988". All hotline details live in one config file: [`src/config/crisisResources.ts`](src/config/crisisResources.ts).
+"Call 988". Each entry says how to get help in the reader's language: for example, Korean and Chinese
+speakers learn that 988 has phone interpreters and that the county help line has Korean, Mandarin, and
+Cantonese menu options. All hotline details live in one config file: [`src/config/crisisResources.ts`](src/config/crisisResources.ts).
 
 **Quick exit**: instantly blanks the screen and replaces the page with a neutral site.
 
 **Export**: a print stylesheet (clean black-on-white, no buttons, phone numbers written out) and a
 **Download PDF** button that builds the PDF on the device with jsPDF.
 
-**Settings**: language (English/Español), text size (3 levels), colors (match device / light / dark),
+**Settings**: language (English, Español, Français, 한국어, 简体中文), text size (3 levels), colors (match device / light / dark),
 optional 4-digit PIN lock, a privacy summary, and **Delete all data** (with confirmation).
 
 **Installable PWA**: can be added to the home screen and works fully offline after the first visit.
@@ -146,11 +149,18 @@ The goal is WCAG 2.1 AA.
   button is a calm plum.
 - **Plain language:** short sentences, aimed at about a 6th-grade reading level, written in second person
   for instructions and first person for the plan ("My warning signs").
-- **Bilingual:** every string lives in [`en.json`](src/i18n/locales/en.json) / [`es.json`](src/i18n/locales/es.json);
-  `<html lang>` follows the chosen language; language options are labelled in their own language with
-  `lang` attributes. The Spanish uses informal *tú* and gender-neutral phrasing (for example "a salvo" instead
-  of "seguro/segura", "por tu cuenta" instead of "solo/sola"). A test fails if the two files ever have
-  different keys or placeholders.
+- **Multilingual:** every string lives in [`src/i18n/locales/`](src/i18n/locales/) (English, Spanish, French,
+  Korean, and Simplified Chinese); `<html lang>` follows the chosen language; language options are labelled
+  in their own language with `lang` attributes. A test fails if any file has different keys or placeholders
+  from English.
+  - The Spanish uses informal *tú* and gender-neutral phrasing (for example "a salvo" instead of
+    "seguro/segura", "por tu cuenta" instead of "solo/sola").
+  - The French also uses *tu* and avoids gendered agreement ("en sécurité", "par toi-même", "une personne
+    proche"). It keeps a non-breaking space before `? ! : ;` and inside `« »`, which a test checks, so
+    punctuation never wraps onto a line of its own.
+  - The Korean uses the polite, warm *-요* style, and wraps lines between words (`word-break: keep-all`).
+  - Korean and Chinese text uses fonts already on the device (Malgun Gothic or Apple SD Gothic Neo; Microsoft
+    YaHei or PingFang SC), so nothing extra is downloaded.
 
 ## How it's built
 
@@ -159,14 +169,14 @@ jsPDF (lazy-loaded), lucide icons, and Vitest with React Testing Library.
 
 ```
 src/
-  config/        crisisResources.ts (all hotline info, bilingual), app.ts (quick-exit URL, limits)
+  config/        crisisResources.ts (all hotline info, in every language), app.ts (quick-exit URL, limits)
   model/         plan.ts (types + section definitions), planReducer.ts, settings.ts, schemas.ts
   lib/           storage.ts (versioned persistence), pin.ts, image.ts, pdf.ts, phone.ts, quickExit.ts
   hooks/         usePersistentState.ts, useHashRoute.ts, useAnnouncer.ts, useFlushOnUnmount.ts
   state/         AppStore.tsx (React context: plan, settings, actions)
   components/    AppShell, CrisisPanel, Dialog, EntryList, Text/ContactSectionEditor, PhotoEditor, ...
   screens/       Welcome, Builder, Plan, Settings, Lock
-  i18n/          setup + locales/en.json, locales/es.json
+  i18n/          setup + locales/{en,es,fr,ko,zh-Hans}.json
 docs/ETHICS.md
 ```
 
@@ -204,7 +214,7 @@ Requires Node 20+.
 ```bash
 npm install
 npm run dev        # http://localhost:5173
-npm test           # 83 unit and component tests
+npm test           # 100 unit and component tests
 npm run typecheck
 npm run lint       # oxlint with jsx-a11y rules
 npm run build      # production build in dist/ (adds the CSP and service worker)
@@ -233,8 +243,9 @@ secure context.
 Edit only [`src/config/crisisResources.ts`](src/config/crisisResources.ts): replace the entries, fill in
 every language, and update `lastReviewed`. Tests check that every resource has text in every language and
 builds a valid `tel:`/`sms:` link. To add a language, add `src/i18n/locales/<code>.json` (the key-parity
-test shows what's missing), add the code to `LANGUAGES` in `src/model/settings.ts`, and add its name in
-`src/i18n/index.ts`.
+test shows what's missing), add the code to `LANGUAGES` in `src/model/settings.ts`, and add the file and the language's name in
+`src/i18n/index.ts`. Add it to `PDF_LANGUAGES` there only if its alphabet fits in Latin-1. For a
+non-Latin script, add a `:lang()` font stack in `src/index.css`.
 
 ## Limitations
 
@@ -250,10 +261,13 @@ test shows what's missing), add the code to `LANGUAGES` in `src/model/settings.t
   crisis or call for help on someone's behalf.
 - **Crisis resources need upkeep.** Numbers and texting keywords change, so re-check them against the
   providers' websites before each release (last checked: see `lastReviewed`).
-- **Translation review.** The Spanish was written carefully but should be reviewed by a native speaker
-  with clinical experience, ideally with input from people with lived experience, before real-world use.
+- **Translation review.** The Spanish, French, Korean, and Chinese were written carefully but should each be
+  reviewed by a native speaker with clinical experience, ideally with input from people with lived
+  experience, before real-world use. The Chinese is Simplified only; Traditional Chinese readers (including
+  many Cantonese speakers) would need their own translation.
 - **PDF characters.** The PDF uses built-in Latin-1 fonts, so emoji and non-Latin scripts are left out of
-  the PDF. The Print option keeps them.
+  the PDF. In Korean and Chinese the app offers Print and "Save as PDF" instead of Download PDF, since the
+  PDF would be nearly empty. Print keeps every script.
 - **Photos** are limited to 6 to stay within localStorage limits (about 5 MB per site).
 - **`sms:` pre-filled text** behaves slightly differently across phones and desktop browsers.
 - Accessibility was checked by automated linting (jsx-a11y), keyboard testing, and measured contrast,

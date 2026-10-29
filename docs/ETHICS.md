@@ -86,7 +86,7 @@ to make sure technology-based services are competent and safe.
 - **Safe messaging.** Language about suicide and lethal means is direct but not graphic, and it never
   describes methods. The "making my space safer" step focuses on time, distance, and asking for help, in
   line with lethal-means counseling practice.
-- **Knowing what I don't know.** The Spanish translation and the crisis-resource list are flagged for
+- **Knowing what I don't know.** The translations and the crisis-resource list are flagged for
   expert review and regular re-checking. Each crisis entry links to its official source in the code, and
   the config records the date it was last verified.
 
@@ -95,9 +95,14 @@ to make sure technology-based services are competent and safe.
 *In brief:* understand and respect the cultures and languages of the people served, and work to remove
 barriers to access.
 
-- **Bilingual from the start.** English and Spanish have the same content, chosen for Los Angeles County,
+- **Multilingual from the start.** English and Spanish have the same content, chosen for Los Angeles County,
   where Spanish is the most common language other than English. Spanish users get the Spanish-language
   ways to reach each crisis line (988: press 2 or text AYUDA; Crisis Text Line: text AYUDA).
+- **More languages, without overpromising.** French, Korean, and Simplified Chinese have the same content
+  too. Crisis lines rarely have counselors who speak these languages, so each entry says honestly what to
+  expect and how to get help anyway: 988 and 911 connect phone interpreters if you say the name of your
+  language, the county help line has Korean, Mandarin, and Cantonese menu options, and texting services
+  are English and Spanish only.
 - **Inclusive language.** The Spanish avoids gendered adjectives where possible ("a salvo", "por tu cuenta",
   "una persona capacitada"). Examples include faith communities, pets, school, and work, so that people from
   different backgrounds see themselves in the prompts.

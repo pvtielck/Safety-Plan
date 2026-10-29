@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { crisisConfig } from '../config/crisisResources'
 import { CrisisResourceList, crisisActionLabel } from '../components/CrisisResourceList'
 import type { Route } from '../hooks/useHashRoute'
+import { PDF_LANGUAGES } from '../i18n'
 import { useLanguage } from '../i18n/useLanguage'
 import { smsHref, telHref } from '../lib/phone'
 import type { PdfContent } from '../lib/pdf'
@@ -202,6 +203,7 @@ function ExportPanel({ plan }: { plan: SafetyPlan }) {
   const { t } = useTranslation()
   const language = useLanguage()
   const [status, setStatus] = useState<'idle' | 'working' | 'done' | 'error'>('idle')
+  const canMakePdf = PDF_LANGUAGES.includes(language)
 
   const downloadPdf = async () => {
     setStatus('working')
@@ -230,11 +232,14 @@ function ExportPanel({ plan }: { plan: SafetyPlan }) {
           <Printer aria-hidden="true" className="size-5" />
           {t('export.print')}
         </button>
-        <button type="button" className="btn-secondary" onClick={() => void downloadPdf()} disabled={status === 'working'}>
-          <Download aria-hidden="true" className="size-5" />
-          {status === 'working' ? t('export.making') : t('export.pdf')}
-        </button>
+        {canMakePdf && (
+          <button type="button" className="btn-secondary" onClick={() => void downloadPdf()} disabled={status === 'working'}>
+            <Download aria-hidden="true" className="size-5" />
+            {status === 'working' ? t('export.making') : t('export.pdf')}
+          </button>
+        )}
       </div>
+      {!canMakePdf && <p className="mt-3 text-ink-muted">{t('export.printToPdf')}</p>}
       <p role="status" className={status === 'error' ? 'mt-3 font-bold text-warning-ink' : 'mt-3 text-ink-muted'}>
         {status === 'done' ? t('export.done') : status === 'error' ? t('export.error') : ''}
       </p>

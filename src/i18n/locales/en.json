@@ -62,7 +62,7 @@
     "reassure": "You can stop and come back any time. Everything saves as you go.",
     "offlineTitle": "Works offline",
     "offlineBody": "Open it any time, even without internet.",
-    "freeTitle": "Free, in English and Spanish",
+    "freeTitle": "Free, in 5 languages",
     "freeBody": "No sign-up and no cost.",
     "previewLabel": "Example"
   },
@@ -275,6 +275,7 @@
     "making": "Making your PDF…",
     "done": "Your PDF was downloaded.",
     "error": "Sorry, the PDF couldn't be made. Try Print instead, and choose “Save as PDF”.",
+    "printToPdf": "To save a PDF, choose Print, then “Save as PDF”.",
     "madeOn": "Made on {{date}}",
     "fileName": "my-plan",
     "notCare": "This plan does not replace professional care. In an emergency, call 911."
