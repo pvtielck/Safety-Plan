@@ -2,7 +2,7 @@
   "name": "my-safety-plan",
   "private": true,
   "version": "1.0.0",
-  "description": "A private, offline, bilingual safety-planning tool inspired by the Stanley-Brown Safety Planning Intervention.",
+  "description": "A private, offline, multilingual safety-planning tool inspired by the Stanley-Brown Safety Planning Intervention.",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -146,6 +146,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/*
+ * Atkinson Hyperlegible Next has no Korean or Chinese characters. Those come from fonts already on
+ * the device (nothing extra to download), named here so each language gets the right glyph shapes.
+ * :lang() also matches the language picker's own labels, so "한국어" and "简体中文" render properly
+ * in every language.
+ */
+:lang(ko) {
+  font-family: 'Atkinson Hyperlegible Next', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
+  /* Korean puts spaces between words, so wrap there instead of between any two syllables. */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+:lang(zh-Hans) {
+  font-family: 'Atkinson Hyperlegible Next', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', 'Noto Sans CJK SC', sans-serif;
+}
+
 /* A thick, high-contrast focus ring for keyboard users on every interactive element. */
 :focus-visible {
   outline: 3px solid var(--c-focus);

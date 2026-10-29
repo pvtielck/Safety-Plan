@@ -62,7 +62,7 @@
     "reassure": "Puedes parar y volver cuando quieras. Todo se guarda mientras escribes.",
     "offlineTitle": "Funciona sin internet",
     "offlineBody": "Ábrelo cuando quieras, incluso sin conexión.",
-    "freeTitle": "Gratis, en inglés y español",
+    "freeTitle": "Gratis, en 5 idiomas",
     "freeBody": "Sin registro y sin costo.",
     "previewLabel": "Ejemplo"
   },
@@ -275,6 +275,7 @@
     "making": "Preparando tu PDF…",
     "done": "Se descargó tu PDF.",
     "error": "Lo sentimos, no se pudo crear el PDF. Intenta con Imprimir y elige “Guardar como PDF”.",
+    "printToPdf": "Para guardar un PDF, elige Imprimir y luego “Guardar como PDF”.",
     "madeOn": "Hecho el {{date}}",
     "fileName": "mi-plan",
     "notCare": "Este plan no reemplaza la atención profesional. En una emergencia, llama al 911."

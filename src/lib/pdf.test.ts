@@ -5,6 +5,10 @@ describe('toPdfText', () => {
     expect(toPdfText('¿Señales? ¡Sí! Ñandú, acción')).toBe('¿Señales? ¡Sí! Ñandú, acción')
   })
 
+  it('keeps French characters and spells out œ, which Latin-1 lacks', () => {
+    expect(toPdfText('Étape 2 : « Ça va ? » Mon cœur')).toBe('Étape 2 : « Ça va ? » Mon coeur')
+  })
+
   it('swaps typographic punctuation for plain equivalents and drops emoji', () => {
     expect(toPdfText('“Hi” — it’s me \u{1F600}…')).toBe('"Hi" - it\'s me ...')
   })

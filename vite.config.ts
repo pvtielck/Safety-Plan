@@ -69,7 +69,7 @@ export default defineConfig({
         // Kept short and neutral so a home-screen icon is discreet.
         short_name: 'My Plan',
         description:
-          'A private safety plan that stays on your device. Works offline. English and Spanish.',
+          'A private safety plan that stays on your device. Works offline. In English, Spanish, French, Korean, and Chinese.',
         lang: 'en',
         start_url: base,
         scope: base,
