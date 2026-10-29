@@ -3,6 +3,8 @@
 A private, bilingual (English/Spanish) safety-planning app that works offline. It is inspired by the
 six-step structure of the Stanley-Brown Safety Planning Intervention.
 
+**Live site: https://pvtielck.github.io/Safety-Plan/**
+
 > **If you are in crisis right now:** call or text **988** (Suicide & Crisis Lifeline), text **HOME** to
 > **741741** (Crisis Text Line), or call **911** if you are in immediate danger. In Los Angeles County you
 > can also call the LA County Department of Mental Health 24/7 Help Line at **1-800-854-7771**.
